@@ -1,0 +1,31 @@
+{
+  "name": "engage-game-project",
+  "version": "1.0.0",
+  "description": "A game built with typescript and Object Oriented Principles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "webpack-dev-server",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevEngage/engage-game-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevEngage/engage-game-project/issues"
+  },
+  "homepage": "https://github.com/DevEngage/engage-game-project#readme",
+  "devDependencies": {
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "ts-loader": "^0.8.2",
+    "jquery": "~2.2.4"
+  }
+}
