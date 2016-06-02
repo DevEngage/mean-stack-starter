@@ -2,10 +2,10 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: "./app.ts",
+    entry: "./public/app/app.ts",
     output: {
         path: __dirname,
-        filename: "bundle.js"
+        filename: "public/bundle.js"
     },
     module: {
         loaders: [
