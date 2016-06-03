@@ -1,0 +1,31 @@
+[ERR!] cwd  : /Users/th3brink/Sandbox/means-stack
+[ERR!] os   : Darwin 15.5.0
+[ERR!] argv : "/usr/local/bin/node" "/usr/local/bin/tsd" "install"
+[ERR!] node : v4.4.5
+[ERR!] tsd  : 0.6.5
+[ERR!] Error: unexpected status code: 404 on: https://raw.githubusercontent.com/DevEngage/means-stack/fc341765ebbb04b7109981a25dced01f488f4d94/mongodb/mongodb.d.ts
+[ERR!] CODE : undefined
+[ERR!] unexpected status code: 404 on: https://raw.githubusercontent.com/DevEngage/means-stack/fc341765ebbb04b7109981a25dced01f488f4d94/mongodb/mongodb.d.ts
+[ERR!] If you need help, you may report this error at:
+    https://github.com/DefinitelyTyped/tsd/issues
+
+[ERR!] 
+Error: unexpected status code: 404 on: https://raw.githubusercontent.com/DevEngage/means-stack/fc341765ebbb04b7109981a25dced01f488f4d94/mongodb/mongodb.d.ts
+    at Request.<anonymous> (/usr/local/lib/node_modules/tsd/build/http/CacheStreamLoader.js:162:28)
+    at emitOne (events.js:77:13)
+    at Request.emit (events.js:169:7)
+    at Request.onRequestResponse (/usr/local/lib/node_modules/tsd/node_modules/request/request.js:977:10)
+    at emitOne (events.js:77:13)
+    at ClientRequest.emit (events.js:169:7)
+    at HTTPParser.parserOnIncomingClient (_http_client.js:430:21)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:103:23)
+    at TLSSocket.socketOnData (_http_client.js:320:20)
+    at emitOne (events.js:77:13)
+
+[ERR!] tsd.json: {"version":"v4","repo":"DevEngage/means-stack","ref":"master","path":"typings","bundle":"typings/tsd.d.ts","installed":{"mime/mime.d.ts":{"commit":"fc341765ebbb04b7109981a25dced01f488f4d94"},"serve-static/serve-static.d.ts":{"commit":"fc341765ebbb04b7109981a25dced01f488f4d94"},"express/express.d.ts":{"commit":"fc341765ebbb04b7109981a25dced01f488f4d94"},"mongodb/mongodb.d.ts":{"commit":"fc341765ebbb04b7109981a25dced01f488f4d94"},"node/node.d.ts":{"commit":"fc341765ebbb04b7109981a25dced01f488f4d94"},"method-override/method-override.d.ts":{"commit":"fc341765ebbb04b7109981a25dced01f488f4d94"},"errorhandler/errorhandler.d.ts":{"commit":"fc341765ebbb04b7109981a25dced01f488f4d94"},"body-parser/body-parser.d.ts":{"commit":"fc341765ebbb04b7109981a25dced01f488f4d94"}}}
+
+[ERR!] .tsdrc could not be retrieved
+
+[ERR!] Please include the following file with any support request:
+    /Users/th3brink/Sandbox/means-stack/tsd-debug.log
+

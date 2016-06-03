@@ -25,7 +25,13 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "ts-loader": "^0.8.2",
-    "jquery": "~2.2.4"
+    "body-parser": "^1.15.1",
+    "ejs": ">= 0.5.0",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "jquery": "~2.2.4",
+    "method-override": "^2.3.5",
+    "mongodb": ">= 1.4.29",
+    "ts-loader": "^0.8.2"
   }
 }
