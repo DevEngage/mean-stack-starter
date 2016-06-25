@@ -1,8 +1,12 @@
 {
-  "name": "engage-game-project",
+  "name": "means-stack",
   "version": "1.0.0",
-  "description": "A game built with typescript and Object Oriented Principles",
+  "description": "Welcome to the means stack we have fun and games",
   "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": "^6.2.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "webpack-dev-server",
@@ -12,20 +16,13 @@
     "type": "git",
     "url": "git+https://github.com/DevEngage/engage-game-project.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DevEngage/engage-game-project/issues"
-  },
+  "author": "James Brinkerhoff (DevEngage)",
+  "license": "MIT",
   "homepage": "https://github.com/DevEngage/engage-game-project#readme",
-  "devDependencies": {
-    "node-sass": "^3.7.0",
-    "sass-loader": "^3.2.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "ts-loader": "^0.8.2",
-    "jquery": "~2.2.4"
+    "express": "^4.14.0",
+    "mongoose": "^4.5.2",
+    "socket.io": "^1.4.8"
   }
 }
