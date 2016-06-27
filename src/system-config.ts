@@ -3,10 +3,12 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'socket.io-client' : 'vendor/socket.io-client'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'socket.io-client' : {main: 'socket.io.js'}
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -29,6 +31,7 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/chat',
   /** @cli-barrel */
 ];
 
