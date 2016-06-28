@@ -1,37 +1,57 @@
 {
-  "name": "engage-game-project",
+  "name": "means-stack",
   "version": "1.0.0",
-  "description": "A game built with typescript and Object Oriented Principles",
+  "description": "Welcome to the means stack we have fun and games",
   "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": "^6.2.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "webpack-dev-server",
-    "watch": "webpack --watch"
+    "run": "node main.js",
+    "watch": "ng serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DevEngage/engage-game-project.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DevEngage/engage-game-project/issues"
-  },
+  "author": "James Brinkerhoff (DevEngage)",
+  "license": "MIT",
   "homepage": "https://github.com/DevEngage/engage-game-project#readme",
   "devDependencies": {
-    "node-sass": "^3.7.0",
-    "sass-loader": "^3.2.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "angular-cli": "^1.0.0-beta.8",
+    "codelyzer": "0.0.19",
+    "ember-cli-inject-live-reload": "^1.4.0",
+    "jasmine-core": "^2.4.1",
+    "jasmine-spec-reporter": "^2.4.0",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8",
+    "protractor": "^3.3.0",
+    "ts-node": "^0.5.5",
+    "tslint": "^3.6.0",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
   },
   "dependencies": {
-    "body-parser": "^1.15.1",
-    "ejs": ">= 0.5.0",
-    "errorhandler": "^1.4.2",
-    "express": "^4.13.3",
-    "jquery": "~2.2.4",
-    "method-override": "^2.3.5",
-    "mongodb": ">= 1.4.29",
-    "ts-loader": "^0.8.2"
+    "@angular/common": "2.0.0-rc.3",
+    "@angular/compiler": "2.0.0-rc.3",
+    "@angular/core": "2.0.0-rc.3",
+    "@angular/http": "2.0.0-rc.3",
+    "@angular/platform-browser": "2.0.0-rc.3",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.3",
+    "@angular/router": "3.0.0-alpha.8",
+    "body-parser": "^1.15.2",
+    "es6-shim": "^0.35.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.2",
+    "multer": "^1.1.0",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "socket.io": "^1.4.8",
+    "socket.io-client": "^1.4.8",
+    "systemjs": "0.19.26",
+    "zone.js": "^0.6.12"
   }
 }
