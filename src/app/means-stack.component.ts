@@ -9,5 +9,5 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   styleUrls: ['means-stack.component.css']
 })
 export class MeansStackAppComponent {
-  title = 'means-stack works!';
+  title = 'Means Stack Starter Repo';
 }
