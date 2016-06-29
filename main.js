@@ -5,6 +5,7 @@ var io = require('socket.io')(http);
 var bodyParser = require('body-parser');
 var multer = require("multer");
 var db = require('./db');
+var port = process.env.PORT || 3000;
 
 
 
@@ -33,14 +34,16 @@ app.post("/upload", multer({dest: "./uploads/"}).array("photos", 12), function(r
     res.send(req.files);
 });
 
-app.get('/', function(req, res) {
-  res.render('index');
-});
+var renderIndex = (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'index.html'));
+}
+ 
+app.get('/*', renderIndex);
 
 io.on('connection', function(socket){
   console.log('a user connected');
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+  console.log(`Example app listening on port ${port}!`);
 });

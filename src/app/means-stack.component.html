@@ -1,4 +1,8 @@
 <h1>
   {{title}}
-  <app-profile></app-profile>
+  <nav>
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['/profile']">Profile</a>
+  </nav>
+  <router-outlet></router-outlet>
 </h1>
