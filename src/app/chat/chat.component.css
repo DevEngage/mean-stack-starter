@@ -1,0 +1,31 @@
+
+
+.chat-container {
+    width: 400px;
+    height: 500px;
+    border: 2px solid black
+}
+
+.chat-content {
+    height: calc(100% - 35px);
+}
+.chat-input {
+    width: calc(100% - 59px);
+    display: inline-block;
+    border: none;
+    padding: 5px;
+}
+
+.chat-input:focus {
+    outline: none;
+}
+
+.chat-input-container {
+    border-top: 1px solid darkslategray;
+    width: 100%;
+}
+
+.chat-input-container .btn {
+    margin-top: -4px;
+    margin-left: 2px;
+}
