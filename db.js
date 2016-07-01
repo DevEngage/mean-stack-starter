@@ -6,6 +6,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   // we're connected!
+  console.log('> User connected to Mongo! ')
 });
 
 var image = mongoose.Schema({
@@ -20,3 +21,9 @@ var image = mongoose.Schema({
 });
 
 exports.Images = mongoose.model('Images', image);
+
+var chat = mongoose.Schema({
+  body: String
+});
+
+exports.Chat = mongoose.model('Chat', chat);
