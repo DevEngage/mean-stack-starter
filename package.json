@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "node main.js",
-    "watch": "ng serve"
+    "watch": "ng serve",
+    "lint": "tslint \"src/**/*.ts\""
   },
   "repository": {
     "type": "git",
