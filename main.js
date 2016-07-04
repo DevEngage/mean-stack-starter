@@ -1,13 +1,13 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var Primus = require('primus.io');
 var bodyParser = require('body-parser');
 var multer = require("multer");
 var db = require('./db');
 var port = process.env.PORT || 3000;
 
-
+var primus = new Primus(http, { transformer: 'websockets', parser: 'JSON' });
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/dist'));
@@ -40,8 +40,18 @@ var renderIndex = (req, res) => {
  
 app.get('/*', renderIndex);
 
-io.on('connection', function(socket){
-  console.log('a user connected');
+primus.on('connection', function (spark) {
+ 
+  // listen to hi events 
+  spark.on('hi', function (msg) {
+ 
+    console.log(msg); //-> hello world 
+ 
+    // send back the hello to client 
+    spark.send('hello', 'hello from the server');
+ 
+  });
+ 
 });
 
 app.listen(port, function () {
