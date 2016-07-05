@@ -3,7 +3,7 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  'socket.io-client': 'vendor/socket.io-client',
+  'socket.io-client' : 'vendor/socket.io-client',
   'moment': 'vendor/moment/moment.js',
   'ng2-bootstrap': 'vendor/ng2-bootstrap'
 

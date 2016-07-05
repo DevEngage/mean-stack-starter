@@ -7,7 +7,6 @@ module.exports = function(defaults) {
     vendorNpmFiles: [
       'systemjs/dist/system-polyfills.js',
       'systemjs/dist/system.src.js',
-      'socket.io-client/socket.io.js',
       'zone.js/dist/**/*.+(js|js.map)',
       'es6-shim/es6-shim.js',
       'reflect-metadata/**/*.+(js|js.map)',
@@ -15,6 +14,7 @@ module.exports = function(defaults) {
       '@angular/**/*.+(js|js.map)',
       'ng2-bootstrap/**/*',
       'moment/moment.js',
+      'socket.io-client/**/*.*'
     ]
   });
 };

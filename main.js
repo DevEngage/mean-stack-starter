@@ -1,13 +1,12 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
-var Primus = require('primus.io');
+var io = require('socket.io')(http);
 var bodyParser = require('body-parser');
 var multer = require("multer");
+var path = require('path');
 var db = require('./db');
 var port = process.env.PORT || 3000;
-
-var primus = new Primus(http, { transformer: 'websockets', parser: 'JSON' });
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/dist'));
@@ -35,24 +34,41 @@ app.post("/upload", multer({dest: "./uploads/"}).array("photos", 12), function(r
 });
 
 var renderIndex = (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'dist/index.html'));
 }
  
 app.get('/*', renderIndex);
 
-primus.on('connection', function (spark) {
- 
-  // listen to hi events 
-  spark.on('hi', function (msg) {
- 
-    console.log(msg); //-> hello world 
- 
-    // send back the hello to client 
-    spark.send('hello', 'hello from the server');
- 
+io.on('connection', (socket) => {
+  console.log('user connected');
+  
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
   });
- 
+
+  socket.on('', ()=>{
+    Person.
+      find({
+      })
+      .limit(10)
+      .exec((chat)=>{
+        io.emit('message', {type:'old-messages', text: chat}); 
+      })
+  });
+  
+  socket.on('add-message', (message) => {
+    var chat = new db.Chat(message);
+    chat.save((err)=> {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('chat saved');
+        io.emit('message', {type:'new-message', text: message}); 
+      }
+    });
+  });
 });
+
 
 app.listen(port, function () {
   console.log(`Example app listening on port ${port}!`);
