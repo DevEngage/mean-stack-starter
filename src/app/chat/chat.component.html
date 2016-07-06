@@ -1,7 +1,9 @@
 
 <div class="chat-container">
   <div class="chat-content">
-
+    <div *ngFor="let chatItem of chat">
+      <div>{{chat}}</div>
+    </div>
   </div>
   <div class="chat-input-container">
     <input class="chat-input" type="text" placeholder="Start Chatting" >

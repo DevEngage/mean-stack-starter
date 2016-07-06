@@ -37,12 +37,17 @@ app.post("/upload", multer({dest: "./uploads/"}).array("photos", 12), function(r
 var renderIndex = (req, res) => {
     res.sendFile(path.resolve(__dirname, 'index.html'));
 }
- 
+
+app.get('/api/chat', (req, res)=>{
+  console.log('hit chat');
+  res.json(['test', 'test 2']);
+});
+
 app.get('/*', renderIndex);
 
-io.on('connection', function(socket){
-  console.log('a user connected');
-});
+// io.on('connection', function(socket){
+//   console.log('a user connected');
+// });
 
 app.listen(port, function () {
   console.log(`Example app listening on port ${port}!`);
